@@ -38,13 +38,11 @@ img {
   margin-right: 0 !important;
   text-align: right;
 }
-.nav_img
-{
+.nav_img {
   padding-left: 3rem;
   padding-top: 1rem;
 }
-.nav_flex
-{
+.nav_flex {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -82,10 +80,9 @@ img {
   line-height: 26px;
   letter-spacing: 0em;
   text-align: left;
-  text-shadow: none!important;
+  text-shadow: none !important;
 }
-.mobile_li
-{
+.mobile_li {
   margin-top: 10px !important;
   margin-bottom: 10px !important;
 }
@@ -106,7 +103,7 @@ header:hover {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
 }
@@ -122,8 +119,7 @@ header:hover {
   margin: 0px;
   justify-content: center;
   align-items: center;
- 
-  
+
   justify-content: space-between;
 }
 
@@ -176,8 +172,7 @@ header:hover {
   transition: transform 0.3s ease;
   transform: translateX(100%);
   padding-left: 10px;
-  text-shadow: none!important;
-
+  text-shadow: none !important;
 }
 
 .sidebar li {
@@ -242,26 +237,39 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 830px) {
+@media only screen and (min-width: 920px) {
   .navlinks ion-icon {
     display: none;
   }
 }
 
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 920px) {
   .navlinks .items {
     display: none;
   }
+  header {
+    position: sticky;
+    top: 0;
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+  }
 }
 @media only screen and (max-width: 619px) {
- .navlinks
- {
-  padding: 0;
- }
- .navbar
- {
-  padding: 0;
- }
+  .navlinks {
+    padding: 0;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .nav_img {
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+  .nav_img img {
+    width: 100px;
+  }
 }
 
 /* section 1 */
@@ -283,8 +291,12 @@ h2 {
   /* height: auto; */
   width: 100%;
 
-  height: 100vh;
-  /* object-fit: cover; */
+  height: 92vh;
+  object-fit: cover;
+  display: block;
+}
+.credai_banner_image_mobile {
+  display: none;
 }
 
 .credai_banner_text {
@@ -312,8 +324,8 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   /* border-radius: 36px 0px 36px 36px; */
-background: #157D43;
-  
+  background: #157d43;
+
   text-align: center;
   padding: 0px 60px 0px 60px !important;
   line-height: 37.74px;
@@ -329,16 +341,14 @@ background: #157D43;
   margin: 0 !important;
   display: inline;
 }
-.Erarera
-{
+.Erarera {
   font-family: "Roobert-Regular";
-font-size: 40px;
-font-weight: 500;
-line-height: 58px;
-letter-spacing: 0em;
-text-align: center;
-color: white;
-
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 58px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
 }
 .credai_banner_tag_vision {
   color: #123c63;
@@ -359,7 +369,6 @@ color: white;
   line-height: 58px;
   letter-spacing: 0em;
   text-align: center;
-  
 }
 
 .credai_banner_tag_credai {
@@ -446,6 +455,7 @@ color: white;
   .credai_banner_text,
   .credai_banner_text_real {
     font-size: 25px;
+    margin: 5px 0;
   }
 
   .credai_banner_container {
@@ -461,21 +471,23 @@ color: white;
   }
 
   .credai_banner_image {
-    height: 100vh!important;;
-    border-radius: 20px;
+    height: 92vh !important;
+    /* border-radius: 20px; */
   }
   .credai-difference-container-upper-part {
     height: auto !important;
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 767px) {
   .credai_banner_tag_credai,
   .credai_banner_tag_and_creating,
   .credai_banner_tag_vision,
   .credai_banner_text,
   .credai_banner_text_real {
     font-size: 20px;
+    line-height: 20px;
+    margin: 0;
   }
 
   .credai_banner_container {
@@ -483,12 +495,23 @@ color: white;
   }
 
   .credai_banner_tag {
-    bottom: -3rem;
+    bottom: -40px;
   }
-
   .credai_banner_image {
+    /* max-width: 100%; */
+    /* height: auto; */
+    width: 100%;
+
     height: 90vh;
-    border-radius: 20px;
+    object-fit: cover;
+    display: none;
+  }
+  .credai_banner_image_mobile {
+    display: block;
+    width: 100%;
+
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -627,8 +650,17 @@ color: white;
 
 .credai_diffrence_text_super {
   color: #157d43;
+  line-height: 50px;
 }
-
+.credai_diffrence_text_super span {
+  font-family: "HindVadodara-Medium";
+}
+.credai_diffrence_text_rera {
+  line-height: 50px;
+}
+.credai_diffrence_text_rera span {
+  font-family: "HindVadodara-Medium";
+}
 .credai_diffrence_text_rera {
   color: #123c63;
 }
@@ -640,7 +672,7 @@ color: white;
   justify-content: center;
   gap: 1rem;
   padding: 0 90px !important;
-  width: 60%;
+  width: 45%;
   margin: 0 auto;
 }
 
@@ -781,6 +813,18 @@ color: white;
   padding-left: 10px;
   padding-bottom: 10px;
 }
+@media (max-width: 1399px) {
+  .tab {
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 90px !important;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 1199px) {
   .tab {
     overflow: hidden;
@@ -891,6 +935,9 @@ color: white;
     flex-direction: column;
     padding: 30px 20px 20px 20px;
   }
+  .credai_diffrence_text_rera {
+    line-height: 25px;
+  }
 }
 @media (max-width: 575px) {
   .tab {
@@ -902,6 +949,9 @@ color: white;
   .credai-difference-container-main {
     padding: 3rem 4rem 0;
     flex-direction: column;
+  }
+  .credai_diffrence_text_super {
+    line-height: 30px;
   }
 }
 
@@ -1033,7 +1083,7 @@ color: white;
   display: flex;
   flex-direction: column;
   height: 8rem;
-  padding-left: 18px;
+  padding: 0 10px 0 15px;
   border: 1px solid black;
   position: relative;
 }
@@ -1051,7 +1101,6 @@ color: white;
   margin: 0;
   display: flex;
   margin-top: 30px;
- 
 }
 
 .video_btn_outer {
@@ -1106,7 +1155,6 @@ canvas,
 video {
   display: inline;
   zoom: 1.4 !important;
-
 }
 
 .iframe-wrapper .close-video {
@@ -1129,7 +1177,7 @@ video {
 }
 @media (max-width: 576px) {
   .card_width_main {
-    width: 100%!important;
+    width: 100% !important;
   }
 }
 @media (max-width: 575px) {
@@ -1611,6 +1659,7 @@ video {
 .accordion-item1 .accordion-title1 {
   font-size: 22px;
   font-family: "HindVadodara-Medium";
+  line-height: 30px;
 }
 .gujarati_align {
   line-height: 29px;
@@ -1665,6 +1714,8 @@ video {
   line-height: 25px;
   letter-spacing: 0em;
   text-align: left;
+  display: block;
+  width: 96%;
 }
 
 .accordion button .icon {
@@ -1766,7 +1817,7 @@ video {
 }
 .accordion button[aria-expanded="true"] + .accordion-content1 {
   opacity: 1;
-  max-height: 9em;
+  max-height: 100%;
   transition: all 1s linear;
   will-change: opacity, max-height;
 }
@@ -1799,22 +1850,22 @@ video {
   text-align: left;
 }
 .accordian_button_show {
-  background-color: black!important;
-  padding: 25px 25px!important;
-  text-align: center!important;
-  color: #f0f0f0!important;
+  background-color: black !important;
+  padding: 25px 25px !important;
+  text-align: center !important;
+  color: #f0f0f0 !important;
   /* border-radius: 50px; */
-  border: none!important;
-  cursor: pointer!important;
+  border: none !important;
+  cursor: pointer !important;
 
-  font-family: "Roobert-Regular"!important;
-  font-size: 22px!important;
-  font-weight: 500!important;
-  line-height: 16px!important;
-  letter-spacing: 0em!important;
+  font-family: "Roobert-Regular" !important;
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  letter-spacing: 0em !important;
 
-  transition: 1s ease!important;
-  width: 12rem!important;
+  transition: 1s ease !important;
+  width: 12rem !important;
 }
 .accordian_button:hover {
   background-color: #157d43;
@@ -1994,7 +2045,7 @@ input.check-toggle-round-flat:checked + label:after {
     width: 10rem !important;
   }
   .accordian_button_show {
-    padding: 17px 25px;
+    padding: 17px 25px !important;
     width: 12rem;
   }
 }
@@ -2007,7 +2058,7 @@ input.check-toggle-round-flat:checked + label:after {
     width: 100%;
   }
   .accordian_div_button button {
-    width: 100%;
+    width: 100% !important;
   }
   .accordian_button {
     width: 90% !important;
@@ -2065,7 +2116,23 @@ input.check-toggle-round-flat:checked + label:after {
   margin-top: 10px;
   color: #686868;
 }
-
+.img_footer1 a {
+  text-decoration: none;
+}
+.mail a {
+  color: #000;
+  transition: all 0.4s;
+}
+.mail a:hover {
+  color: #157d43;
+}
+.tel a {
+  color: #157d43;
+  transition: all 0.4s;
+}
+.tel a:hover {
+  color: #123c63;
+}
 .email_text {
   display: grid;
   width: 100%;
@@ -2268,7 +2335,7 @@ input.check-toggle-round-flat + label:before {
     height: auto;
   }
   .logo {
-    padding-right: 17rem;
+    padding-right: 5rem;
   }
   .navlinks {
     padding-right: 2rem;
@@ -2314,6 +2381,14 @@ input.check-toggle-round-flat + label:before {
   align-items: center;
 } */
 }
+@media (max-width: 1299px) {
+  .navlinks li {
+    margin: 30px 20px;
+  }
+  .navlinks {
+    padding-left: 20px;
+  }
+}
 @media (max-width: 1199px) {
   .new_flex_text {
     font-family: "Roobert-Medium";
@@ -2339,6 +2414,9 @@ input.check-toggle-round-flat + label:before {
   .tel {
     font-size: 30px;
     line-height: 40px;
+  }
+  .navlinks li {
+    margin: 30px 10px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -2458,6 +2536,9 @@ input.check-toggle-round-flat + label:before {
   .nav_item {
     font-size: 15px;
   }
+  .nav_img img{
+    width: 100px;
+  }
 }
 @media (max-width: 991px) {
   .credai_banner_text {
@@ -2522,6 +2603,19 @@ input.check-toggle-round-flat + label:before {
   .img_footer {
     width: 120px;
   }
+  .slider::before,
+  .slider::after {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+    height: 163px;
+    position: absolute;
+    width: 400px;
+    z-index: 2;
+  }
 }
 @media (max-width: 575px) {
   .credai-difference-container-main {
@@ -2571,5 +2665,18 @@ input.check-toggle-round-flat + label:before {
   .footer_link {
     font-size: 14px;
     text-align: left;
+  }
+  .slider::before,
+  .slider::after {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+    height: 163px;
+    position: absolute;
+    width: 180px;
+    z-index: 2;
   }
 }
